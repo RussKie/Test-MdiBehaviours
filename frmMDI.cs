@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -10,6 +11,8 @@ namespace WindowsFormsApp1
         public frmMDI()
         {
             InitializeComponent();
+
+            Text = RuntimeInformation.FrameworkDescription;
 
             _menuStrip = new MenuStrip();
             _menuStrip.Items.Add(new ToolStripMenuItem { Text = "Parent" });
